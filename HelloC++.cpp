@@ -1,30 +1,23 @@
 ﻿#include <iostream>
-#include <stdlib.h>
 
 using namespace std;
 
+void swap(int& x, int& y)
+{
+	int tmp = x;
+	x = y;
+	y = tmp;
+}
+
 int main()
 {
-	int FirstMoney = 50;
-	int TargetMoney = 250;
-	int CurMoney = FirstMoney;
-	int NumWinning = 0;
-
-	while (CurMoney > 0 && CurMoney < TargetMoney)
-	{
-		if (rand() % 2 > 0)
-		{
-			CurMoney ++;
-			NumWinning++;
-		}
-		else 
-		{
-			CurMoney --;
-		}
-	}
-
-	cout << CurMoney<<endl;
-	cout << NumWinning<<endl;
+	int a = 10;
+	int b = 20;
+	cout << "a: " << a << endl;
+	cout << "b: " << b << endl;
+	swap(a, b);
+	cout << "a: " << a << endl;
+	cout << "b: " << b << endl;
 
 
 	return 0;
