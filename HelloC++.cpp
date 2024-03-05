@@ -1,27 +1,19 @@
 ﻿#include <iostream>
+#include <string>
 
 using namespace std;
 
-void display(char c = 'q', int n = 10)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << c;
-	}
-	cout << endl;
-}
 
 int main()
 {
+	string Names[] = { "철수","영희","민철" };
 
-	cout << "아무런 인수가 전달되지 않은 경우: \n";
-	display();
-
-	cout << "\n첫 번째 인수만 전달되는 경우: \n";
-	display('#');
-
-	cout << "\n모든 인수가 전달되는 경우: \n";
-	display('#', 5);
+	for (auto& name : Names)
+	{
+		int i = 0;
+		cout << i << "번쨰 친구의 이름 : " << name << endl;
+		i++;
+	}
 
 	return 0;
 }
