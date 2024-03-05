@@ -6,14 +6,26 @@ using namespace std;
 
 int main()
 {
-	string Names[] = { "철수","영희","민철" };
+	string First;
+	string Second;
+	int i = 0;
+	int distance = 0;
 
-	for (auto& name : Names)
+	cout << "첫 번째 문자열을 입력하시오." << endl;
+	getline(cin, First);
+	cout << endl;
+	cout << "두 번째 문자열을 입력하시오." << endl;
+	getline(cin, Second);
+	cout << endl;
+	for (char word : First)
 	{
-		int i = 0;
-		cout << i << "번쨰 친구의 이름 : " << name << endl;
+		if (word != Second[i])
+		{
+			distance++;
+		}
 		i++;
 	}
+	cout << "해밍거리: " << distance;
 
 	return 0;
 }
