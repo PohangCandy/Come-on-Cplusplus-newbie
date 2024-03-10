@@ -20,7 +20,7 @@ int main()
 {
 	Circle num1;
 	num1.radius = 10;
-	num1.color = "red";
+	num1.color = "blue";
 
 	cout << "num1의 면적은: " << num1.clacArea();
 
