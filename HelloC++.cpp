@@ -3,25 +3,47 @@
 
 using namespace std;
 
-class Circle {
-public:
-	int radius;
-	string color;
-
-	double clacArea();
+class Animal {
+protected:
+	string Name;
+	string sound;
+	virtual string GetName();
+	virtual void SetName(string newname);
+	virtual string GetSound();
+	virtual void SetSound(string newsound);
+	void Speak();
 };
 
-double Circle::clacArea() {
-	return 3.14 * radius * radius;
+void Animal::Speak() {
+	cout<< sound << endl;
+}
+
+string Animal::GetName() {
+	return Name;
+}
+
+void Animal::SetName(string newname) {
+	Name = newname;
+}
+
+string Animal::GetSound() {
+	return sound;
+}
+
+
+void Animal::SetSound(string newsound) {
+	sound = newsound;
+}
+
+
+
+class Dog : Animal{
+	//SetName("Dog");
 };
 
 
 int main()
 {
-	Circle num1;
-	num1.radius = 10;
-	num1.color = "blue";
 
-	cout << "num1의 면적은: " << num1.clacArea();
 
 }
